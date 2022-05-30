@@ -8,7 +8,7 @@ class MappingDataFromFile:
         )
 
     def extract_content_to_file_and_add_to_array(self) -> list:
-        """Extract contents from subcription file"""
+        """extract contents from subcription file"""
 
         data_array = []
         with self.__fopen as f:
@@ -24,3 +24,14 @@ class MappingDataFromFile:
                 data_array.append(row.split("\t"))
 
         return data_array
+
+    def unlink_content_to_file(self):
+        """remove extracted content to local file"""
+        self.__init__("w")
+
+        with self.__fopen as f:
+            """subscribe local file to empty"""
+
+            f.write("")
+
+            return "Remove extracted content to local file"
