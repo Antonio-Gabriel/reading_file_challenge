@@ -1,0 +1,1 @@
+CREATE TABLE `recicla`.`venda` ( `id` INT NULL AUTO_INCREMENT , `comprador` VARCHAR(80) NULL , `descricao` TEXT NOT NULL , `preco_unitario` DECIMAL NULL , `quantidade` INT NULL , `endereco` TEXT NULL , `fornecedor` VARCHAR(80) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
