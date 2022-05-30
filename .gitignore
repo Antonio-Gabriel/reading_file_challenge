@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 venv/
+=======
+>>>>>>> 74a2e1fb89bb6bf0776d49404e74df8e66836425
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+<<<<<<< HEAD
 .vscode
 resume.txt
 checklist.md
 
 Todo.md
+=======
+>>>>>>> 74a2e1fb89bb6bf0776d49404e74df8e66836425
 
 # C extensions
 *.so
@@ -132,4 +138,8 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
+<<<<<<< HEAD
 .pyre/
+=======
+.pyre/
+>>>>>>> 74a2e1fb89bb6bf0776d49404e74df8e66836425
