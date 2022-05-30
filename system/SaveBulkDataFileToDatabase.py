@@ -37,9 +37,27 @@ class SaveBulkDataFileToDatabase:
             headers,
             attrs
         )
+
+        if affected_rows == 0:
+
+            unlink_result = self.__mapper.unlink_content_to_file()
+
+            return {
+                "error": {
+                    "status": 404,
+                    "msg": "Table not exists",
+                    "unlink": unlink_result
+                }
+            }
       
+        unlink_result = self.__mapper.unlink_content_to_file()
+
         return {
-            "affected_rows": affected_rows,
-            "total_records_from_file": len(attrs),
-            "data": attrs,
+            "success": {
+                "status": 200,
+                "affected_rows": affected_rows,
+                "total_records_from_file": len(attrs),
+                "unlink": unlink_result,
+                "data": attrs
+            }
         }
