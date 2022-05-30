@@ -1,7 +1,0 @@
-nome	email do usuario
-António Gabriel	antoniocamposgabriel@gmail.com
-Kiala Daniel	kialadaniel@gmail.com
-Nicolau Fernandes	nicolaufernandes@gmail.com
-Rayane Isabel	rayaneisabel@gmail.com
-Eny Fernanda	enyfernanda@gmail.com
-Domingos Gomes	domingosgomes@gmail.com
