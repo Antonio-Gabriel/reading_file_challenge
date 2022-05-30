@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileUploader</title>
+  </head>
+  <body>
+    <header>
+      <h1>Selecione um arquivo para extração de dados</h1>
+    </header>
+
+    <main>
+      <form action="/upload-file" method="post" enctype="multipart/form-data">
+        <div>
+          <input
+            type="text"
+            name="tablename"
+            placeholder="table name"
+            required
+          />
+          <br />
+          <small>Informe o nome da tabela onde será enviado os dados</small>
+        </div>
+
+        <br /><br />
+
+        <div>
+          <input type="file" name="file" accept=".txt" required /> <br />
+          <small>Por favor selecione um arquivo com a extensão (.txt)</small>
+        </div>
+
+        <br /><br />
+        <button type="submit">Carregar</button>
+      </form>
+    </main>
+  </body>
+</html>
