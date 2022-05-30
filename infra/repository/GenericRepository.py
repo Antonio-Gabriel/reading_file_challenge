@@ -2,6 +2,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 from infra.sql.connector import conn, cursor
+from infra.sql.CheckTableExists import checkTableExists
 
 
 class GenericRepository:
@@ -9,6 +10,11 @@ class GenericRepository:
         self.__table_name = table_name
 
     def save_bulk(self, headers: list, contents: list):
+
+        table_exists = checkTableExists(self.__table_name)
+
+        if not table_exists:
+            return 0
 
         try:
             headers_attrs = " ".join(headers).replace(" ", ", ")
@@ -33,7 +39,7 @@ class GenericRepository:
                 print("Creating table spam")
             else:
                 raise
-        
-        #cursor.close()
+
+        # cursor.close()
 
         return cursor.rowcount
