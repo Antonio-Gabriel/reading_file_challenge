@@ -82,5 +82,3 @@ reading | Snake Plissken  R$20 Sneakers for R$5                    5            
 - [x] Utilizar apenas linguagens e bibliotecas livres ou gratuitas.
 - [x] Ter testes automatizados.
 - [x] Ter uma boa aparência e ser fácil de usar.
-
-
