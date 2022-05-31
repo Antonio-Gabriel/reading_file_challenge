@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=recicla
+      - MYSQL_ROOT_PASSWORD=12345
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+
+  web:
+    build:
+      context: .
+    restart: on-failure
+    volumes:
+      - .:/extracting-file
+    container_name: reading
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
+volumes:
+  db:
