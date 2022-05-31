@@ -1,5 +1,7 @@
+USE `recicla`;
+
 CREATE TABLE `recicla`.`venda` ( 
-    `id` INT NULL AUTO_INCREMENT , 
+    `id` INT NOT NULL AUTO_INCREMENT , 
     `comprador` VARCHAR(80) NULL , 
     `descricao` TEXT NOT NULL , 
     `preco_unitario` DECIMAL NULL , 
