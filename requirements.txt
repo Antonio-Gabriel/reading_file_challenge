@@ -4,3 +4,4 @@ jinja2
 tabulate
 mysql-connector-python
 python-multipart
+python-dotenv
